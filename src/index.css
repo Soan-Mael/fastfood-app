@@ -1,0 +1,105 @@
+/**
+ * **IMPORTANT** Never break the original structure, only add highly customized new styles
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+    --primary: 15 85% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 20 20% 96%;
+    --secondary-foreground: 15 85% 45%;
+    --muted: 20 10% 96%;
+    --muted-foreground: 20 10% 45%;
+    --accent: 15 85% 96%;
+    --accent-foreground: 15 85% 45%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 10% 90%;
+    --input: 20 10% 90%;
+    --ring: 15 85% 50%;
+    --chart-1: 15 85% 50%;
+    --chart-2: 130 50% 50%;
+    --chart-3: 45 80% 50%;
+    --chart-4: 200 70% 50%;
+    --chart-5: 270 60% 50%;
+    --radius: 0.75rem
+  ;
+    --sidebar-background: 15 85% 98%;
+    --sidebar-foreground: 20 10% 25%;
+    --sidebar-primary: 15 85% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 15 30% 94%;
+    --sidebar-accent-foreground: 15 85% 45%;
+    --sidebar-border: 15 20% 90%;
+    --sidebar-ring: 15 85% 60%}
+  .dark {
+    --background: 20 10% 8%;
+    --foreground: 0 0% 95%;
+    --card: 20 10% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 20 10% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 15 85% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 20 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 20 10% 15%;
+    --muted-foreground: 20 10% 65%;
+    --accent: 20 10% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 15 85% 50%;
+    --chart-1: 15 85% 55%;
+    --chart-2: 130 50% 45%;
+    --chart-3: 45 80% 55%;
+    --chart-4: 200 70% 45%;
+    --chart-5: 270 60% 55%
+  ;
+    --sidebar-background: 20 10% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 15 85% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 20 10% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 20 10% 20%;
+    --sidebar-ring: 15 85% 50%}
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .food-card {
+    @apply relative overflow-hidden rounded-xl border bg-card text-card-foreground shadow transition-all hover:shadow-md;
+  }
+  
+  .food-card-image {
+    @apply aspect-video w-full overflow-hidden object-cover transition-transform duration-300;
+  }
+  
+  .food-card:hover .food-card-image {
+    @apply scale-105;
+  }
+  
+  .category-badge {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+}
