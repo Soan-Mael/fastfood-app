@@ -3,8 +3,8 @@ const { Server } = require('socket.io');
 const app = require('./src/app');
 const socketHandler = require('./src/socket/socketHandler');
 
-// Change le port par défaut à 3003
-const PORT = process.env.PORT || 3003;
+// Change le port par défaut à 3004
+const PORT = process.env.PORT || 3004;
 
 const server = http.createServer(app);
 const io = new Server(server, {
