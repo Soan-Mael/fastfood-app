@@ -1,6 +1,7 @@
 meta:
   environment: node
-  tool: node
+  toolchain: node
+  version: 18
 build:
   commands:
     - cd backend
