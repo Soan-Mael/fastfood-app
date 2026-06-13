@@ -1,0 +1,11 @@
+meta:
+  environment: node
+  tool: node
+build:
+  commands:
+    - cd backend
+    - npm install
+run:
+  command: cd backend && node server.js
+  ports:
+    - 3003
